@@ -22,8 +22,11 @@ public class Main {
 	 */
 	private static void loginRequest() {
 		// TODO Auto-generated method stub
-		userloginScreen userLS;
-		userLS = new userloginScreen();
+//		userloginScreen userLS;
+//		userLS = new userloginScreen();
+		
+		userMemberJoinScreen test;
+		test = new userMemberJoinScreen();
 	}
 
 }

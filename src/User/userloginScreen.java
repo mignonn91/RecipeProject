@@ -82,6 +82,8 @@ public class userloginScreen extends JFrame{
 							userLP.loginCheck(id.getText(), password.getText())==0) {
 						
 						JOptionPane.showMessageDialog(null, "로그인 성공", "성공", JOptionPane.INFORMATION_MESSAGE);
+						dispose();
+						setVisible();
 						
 					}else {
 						JOptionPane.showMessageDialog(null, "입력값을 확인하세요.","에러",JOptionPane.ERROR_MESSAGE);
@@ -95,11 +97,26 @@ public class userloginScreen extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-//				userMemberJoinScreen userMJS;
-//				userMJS = new userMemberJoinScreen;
+				uMembersetVisible();
 			}
 		});
 		
+	}
+	
+	/**
+	 * 화면보이기(사용자메뉴화면)
+	 */
+	void setVisible() {
+//		UserScreen
+	}
+	
+	/**
+	 * 화면보이기(사용자회원가입화면)
+	 */
+	void uMembersetVisible() {
+		dispose();
+		userMemberJoinScreen userMJS;
+		userMJS = new userMemberJoinScreen();
 	}
 
 }
