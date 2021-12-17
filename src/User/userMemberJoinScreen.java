@@ -27,11 +27,11 @@ public class userMemberJoinScreen extends JFrame{
 	JButton Joinbutton = new JButton("회원가입");
 	JButton closeButton = new JButton("닫기");
 	
-	
 	/**
 	 * ID, PW, name 입력값 검사
-	 * @param text1
-	 * @param text2
+	 * @param text1	ID
+	 * @param text2	PW
+	 * @param text3	NAME
 	 * @return 에러 값
 	 */
 	int IDPWNameCheck(String text1, String text2, String text3) {

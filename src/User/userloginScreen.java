@@ -27,8 +27,8 @@ public class userloginScreen extends JFrame{
 	
 	/**
 	 * ID, PW 입력값 검사
-	 * @param text1
-	 * @param text2
+	 * @param text1	ID
+	 * @param text2	PW
 	 * @return 에러 값
 	 */
 	int IDPWCheck(String text1, String text2) {
