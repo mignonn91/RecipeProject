@@ -82,8 +82,8 @@ public class adminLoginScreen extends JFrame{
 							adminLP.ADloginCheck(ADid.getText(), ADpassword.getText())==0) {
 						
 						JOptionPane.showMessageDialog(null, "로그인 성공", "성공", JOptionPane.INFORMATION_MESSAGE);
-//						dispose();
-//						setVisible();
+						dispose();
+						setVisible();
 						
 					}else {
 						JOptionPane.showMessageDialog(null, "입력값을 확인하세요.","에러",JOptionPane.ERROR_MESSAGE);
@@ -108,8 +108,8 @@ public class adminLoginScreen extends JFrame{
 	 * 화면보이기(주화면)
 	 */
 	void setVisible() {
-//		AdminScreen adminS;
-//		adminS = new AdminScreen();
+		AdminScreen adminS;
+		adminS = new AdminScreen();
 	}
 	
 	/**
