@@ -74,8 +74,19 @@ public class userloginScreen extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				if(IDPWCheck(id.getText(), password.getText())==0) {
-//					userLoginPro userLP;
-//					userLP = new userLoginPro;
+					
+					userLoginPro userLP;
+					userLP = new userLoginPro();
+							
+					if(userLP.IDPWECheck(id.getText(), password.getText())==0 && 
+							userLP.loginCheck(id.getText(), password.getText())==0) {
+						
+						JOptionPane.showMessageDialog(null, "로그인 성공", "성공", JOptionPane.INFORMATION_MESSAGE);
+						
+					}else {
+						JOptionPane.showMessageDialog(null, "입력값을 확인하세요.","에러",JOptionPane.ERROR_MESSAGE);
+					}
+					
 				}
 			}
 		});
