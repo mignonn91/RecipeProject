@@ -97,6 +97,7 @@ public class userloginScreen extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
+				dispose();
 				uMembersetVisible();
 			}
 		});
@@ -107,14 +108,14 @@ public class userloginScreen extends JFrame{
 	 * 화면보이기(사용자메뉴화면)
 	 */
 	void setVisible() {
-//		UserScreen
+		UserScreen userS;
+		userS = new UserScreen();
 	}
 	
 	/**
 	 * 화면보이기(사용자회원가입화면)
 	 */
 	void uMembersetVisible() {
-		dispose();
 		userMemberJoinScreen userMJS;
 		userMJS = new userMemberJoinScreen();
 	}

@@ -114,6 +114,7 @@ public class userMemberJoinScreen extends JFrame{
 	 * 화면보이기(사용자메뉴화면)
 	 */
 	void setVisible() {
-//		UserScreen
+		UserScreen userS;
+		userS = new UserScreen();
 	}
 }

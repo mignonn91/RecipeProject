@@ -25,8 +25,8 @@ public class Main {
 //		userloginScreen userLS;
 //		userLS = new userloginScreen();
 		
-		userMemberJoinScreen test;
-		test = new userMemberJoinScreen();
+		UserScreen test;
+		test = new UserScreen();
 	}
 
 }
