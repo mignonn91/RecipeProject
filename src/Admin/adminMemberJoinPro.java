@@ -59,7 +59,7 @@ public class adminMemberJoinPro {
 	 * ID 중복 검사
 	 * @param text1 ID
 	 */
-	int idDuplication(String text1) {
+	int ADidDuplication(String text1) {
 		
 		int check = 0;
 		for (int i = 0; i < IDPWRequest().size(); i++) {
@@ -76,7 +76,7 @@ public class adminMemberJoinPro {
 	 * @param text1	ID
 	 * @param text2	PW
 	 */
-	void MJCreate(String text1, String text2) {
+	void MemberJoin(String text1, String text2) {
 		
 		DBCConnection DBCon;
 		DBCon = new DBCConnection();

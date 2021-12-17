@@ -33,7 +33,7 @@ public class adminMemberJoinScreen extends JFrame{
 	 * @param text2	PW
 	 * @return 에러 값
 	 */
-	int IDPWNameCheck(String text1, String text2) {
+	int ADIDPWCheck(String text1, String text2) {
 		
 		if (text1.equals("")||text2.equals("")) {
 			JOptionPane.showMessageDialog(null, "모두 입력해 주세요.","에러",JOptionPane.ERROR_MESSAGE);
@@ -75,14 +75,14 @@ public class adminMemberJoinScreen extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				if(IDPWNameCheck(ADid.getText(), ADpassword.getText())==0) {
+				if(ADIDPWCheck(ADid.getText(), ADpassword.getText())==0) {
 					
 					adminMemberJoinPro adminJP;
 					adminJP = new adminMemberJoinPro();
 					
-					if(adminJP.idDuplication(ADid.getText())==0) {
+					if(adminJP.ADidDuplication(ADid.getText())==0) {
 						
-						adminJP.MJCreate(ADid.getText(), ADpassword.getText());
+						adminJP.MemberJoin(ADid.getText(), ADpassword.getText());
 						dispose();
 						setVisible();
 						
