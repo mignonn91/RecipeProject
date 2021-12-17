@@ -105,7 +105,7 @@ public class userloginScreen extends JFrame{
 	}
 	
 	/**
-	 * 화면보이기(사용자메뉴화면)
+	 * 화면보이기(주화면)
 	 */
 	void setVisible() {
 		UserScreen userS;

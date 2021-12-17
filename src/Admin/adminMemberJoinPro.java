@@ -20,14 +20,14 @@ public class adminMemberJoinPro {
 	
 	/**
 	 * 데이터요청
-	 * @return
+	 * @return adminDB데이터
 	 */
 	ArrayList<ArrayList<String>> IDPWRequest() {
 		
-		ArrayList<ArrayList<String>> userDB = new ArrayList<ArrayList<String>>();
+		ArrayList<ArrayList<String>> adminDB = new ArrayList<ArrayList<String>>();
 		DBCConnection DBCon;
 		DBCon = new DBCConnection();
-		String sql = "select * from userDB";
+		String sql = "select * from adminDB";
 		
 		try {
 			Connection con = DBCon.getConnection();
@@ -45,21 +45,19 @@ public class adminMemberJoinPro {
 				temp.add(user_id);
 				temp.add(user_password);
 				
-				userDB.add(temp);
+				adminDB.add(temp);
 			}
 			
 		} catch (Exception e) {
 			System.out.println(sql);
 		}
 		
-		return userDB;
+		return adminDB;
 	}
 	
 	/**
 	 * ID 중복 검사
 	 * @param text1 ID
-	 * @param text2 PW
-	 * @param text3 NAME
 	 */
 	int idDuplication(String text1) {
 		
@@ -77,13 +75,12 @@ public class adminMemberJoinPro {
 	 * 계정 생성
 	 * @param text1	ID
 	 * @param text2	PW
-	 * @param text3 NAME
 	 */
-	void MJCreate(String text1, String text2, String text3) {
+	void MJCreate(String text1, String text2) {
 		
 		DBCConnection DBCon;
 		DBCon = new DBCConnection();
-		String sql = "INSERT INTO userDB(id, pw, name) VALUES ('"+text1+"','"+text2+"','"+text3+"');";
+		String sql = "INSERT INTO adminDB(id, pw) VALUES ('"+text1+"','"+text2+"');";
 		
 		try {
 			Connection con = DBCon.getConnection();

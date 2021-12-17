@@ -20,7 +20,7 @@ public class userMemberJoinPro {
 	
 	/**
 	 * 데이터요청
-	 * @return
+	 * @return userDB 데이터
 	 */
 	ArrayList<ArrayList<String>> IDPWRequest() {
 		
@@ -58,8 +58,6 @@ public class userMemberJoinPro {
 	/**
 	 * ID 중복 검사
 	 * @param text1 ID
-	 * @param text2 PW
-	 * @param text3 NAME
 	 */
 	int idDuplication(String text1) {
 		

@@ -105,7 +105,7 @@ public class adminLoginScreen extends JFrame{
 	}
 	
 	/**
-	 * 화면보이기(관리자메뉴화면)
+	 * 화면보이기(주화면)
 	 */
 	void setVisible() {
 //		AdminScreen adminS;

@@ -111,10 +111,10 @@ public class userMemberJoinScreen extends JFrame{
 	}
 	
 	/**
-	 * 화면보이기(사용자메뉴화면)
+	 * 화면보이기(로그인 화면)
 	 */
 	void setVisible() {
-		UserScreen userS;
-		userS = new UserScreen();
+		userloginScreen userLS;
+		userLS = new userloginScreen();
 	}
 }

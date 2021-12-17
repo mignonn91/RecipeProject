@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import User.userloginScreen;
+
 /**
  * @author Soft43
  *	
@@ -16,27 +18,24 @@ import javax.swing.JTextField;
 public class adminMemberJoinScreen extends JFrame{
 	
 	//변수 선언하기
-	JLabel label_name = new JLabel("이름");
 	JLabel label_id = new JLabel("아이디");
 	JLabel label_password = new JLabel("패스워드");
 	
-	JTextField id = new JTextField();
-	JTextField password = new JTextField();
-	JTextField name = new JTextField();
+	JTextField ADid = new JTextField();
+	JTextField ADpassword = new JTextField();
 	
-	JButton Joinbutton = new JButton("회원가입");
-	JButton closeButton = new JButton("닫기");
+	JButton ADJoinbutton = new JButton("회원가입");
+	JButton ADcloseButton = new JButton("닫기");
 	
 	/**
-	 * ID, PW, name 입력값 검사
+	 * ID, PW, 입력값 검사
 	 * @param text1	ID
 	 * @param text2	PW
-	 * @param text3	NAME
 	 * @return 에러 값
 	 */
-	int IDPWNameCheck(String text1, String text2, String text3) {
+	int IDPWNameCheck(String text1, String text2) {
 		
-		if (text1.equals("")||text2.equals("")||text3.equals("")) {
+		if (text1.equals("")||text2.equals("")) {
 			JOptionPane.showMessageDialog(null, "모두 입력해 주세요.","에러",JOptionPane.ERROR_MESSAGE);
 			return 1;
 		}
@@ -50,44 +49,40 @@ public class adminMemberJoinScreen extends JFrame{
 		// TODO Auto-generated constructor stub
 		
 		//화면 생성
-		setTitle("userMemberJoinScreen");
+		setTitle("adminMemberJoinScreen");
 		setSize(375, 275);
 	    setLocationRelativeTo(null);
 	    setVisible(true);
 		setLayout(null);
 		
-		label_name.setBounds(80,50,50,25);
-		name.setBounds(150,50,150,25);
 		label_id.setBounds(80,85,50,25);
-		id.setBounds(150,85,150,25);
+		ADid.setBounds(150,85,150,25);
 		label_password.setBounds(80,120,50,25);
-		password.setBounds(150,120,150,25);
+		ADpassword.setBounds(150,120,150,25);
 		
-		Joinbutton.setBounds(80,170,85,30);
-		closeButton.setBounds(200,170,85,30);
+		ADJoinbutton.setBounds(80,170,85,30);
+		ADcloseButton.setBounds(200,170,85,30);
 		
-		add(label_name);
-		add(name);
 		add(label_id);
-		add(id);
+		add(ADid);
 		add(label_password);
-		add(password);
-		add(Joinbutton);
-		add(closeButton);
+		add(ADpassword);
+		add(ADJoinbutton);
+		add(ADcloseButton);
 		
-		Joinbutton.addActionListener(new ActionListener() {
+		ADJoinbutton.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				if(IDPWNameCheck(id.getText(), password.getText(), name.getText())==0) {
+				if(IDPWNameCheck(ADid.getText(), ADpassword.getText())==0) {
 					
-					adminMemberJoinPro userJP;
-					userJP = new adminMemberJoinPro();
+					adminMemberJoinPro adminJP;
+					adminJP = new adminMemberJoinPro();
 					
-					if(userJP.idDuplication(id.getText())==0) {
+					if(adminJP.idDuplication(ADid.getText())==0) {
 						
-						userJP.MJCreate(id.getText(), password.getText(),name.getText());
+						adminJP.MJCreate(ADid.getText(), ADpassword.getText());
 						dispose();
 						setVisible();
 						
@@ -99,7 +94,7 @@ public class adminMemberJoinScreen extends JFrame{
 			}
 		});
 		
-		closeButton.addActionListener(new ActionListener() {
+		ADcloseButton.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -111,10 +106,10 @@ public class adminMemberJoinScreen extends JFrame{
 	}
 	
 	/**
-	 * 화면보이기(관리자메뉴화면)
+	 * 화면보이기(로그인 화면)
 	 */
 	void setVisible() {
-//		AdminScreen adminS;
-//		adminS = new AdminScreen();
+		adminLoginScreen adminLS;
+		adminLS = new adminLoginScreen();
 	}
 }

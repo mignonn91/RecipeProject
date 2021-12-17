@@ -22,9 +22,8 @@ public class Main {
 	 */
 	private static void ADLoginRequest() {
 		// TODO Auto-generated method stub
-//		adminLoginScreen adminLS;
-//		adminLS = new adminLoginScreen();
-		
+		adminLoginScreen adminLS;
+		adminLS = new adminLoginScreen();
 		
 	}
 
