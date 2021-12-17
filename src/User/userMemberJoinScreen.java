@@ -82,7 +82,18 @@ public class userMemberJoinScreen extends JFrame{
 				// TODO Auto-generated method stub
 				if(IDPWNameCheck(id.getText(), password.getText(), name.getText())==0) {
 					
-					//userMemberJoinPro
+					userMemberJoinPro userJP;
+					userJP = new userMemberJoinPro();
+					
+					if(userJP.idDuplication(id.getText())==0) {
+						
+						userJP.MJCreate(id.getText(), password.getText(),name.getText());
+						dispose();
+						setVisible();
+						
+					}else {
+						JOptionPane.showMessageDialog(null, "입력값을 확인하세요.","에러",JOptionPane.ERROR_MESSAGE);
+					}
 					
 				}
 			}
@@ -99,4 +110,10 @@ public class userMemberJoinScreen extends JFrame{
 		});
 	}
 	
+	/**
+	 * 화면보이기(사용자메뉴화면)
+	 */
+	void setVisible() {
+//		UserScreen
+	}
 }
