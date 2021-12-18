@@ -1,6 +1,3 @@
-/**
- * 
- */
 package DB;
 
 import java.sql.Connection;

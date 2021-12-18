@@ -1,6 +1,3 @@
-/**
- * 
- */
 package Admin;
 
 import java.awt.event.ActionEvent;
