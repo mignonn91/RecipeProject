@@ -26,7 +26,7 @@ public class userLoginPro {
 	 * ID, PW 요청
 	 * @return ID, PW 요청 후 리턴 값
 	 */
-	ArrayList<ArrayList<String>> IDPWRequest() {
+	static ArrayList<ArrayList<String>> IDPWRequest() {
 		
 		ArrayList<ArrayList<String>> userDB = new ArrayList<ArrayList<String>>();
 		DBCConnection DBCon;
@@ -64,7 +64,7 @@ public class userLoginPro {
 	 * @param text1	ID
 	 * @param text2	PW
 	 */
-	int loginCheck(String text1, String text2) {
+	static int loginCheck(String text1, String text2) {
 		
 		int check = 1;
 		
