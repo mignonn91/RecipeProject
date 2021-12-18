@@ -4,11 +4,13 @@
 package User;
 
 import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
@@ -34,8 +36,7 @@ public class UserScreen extends JFrame{
 	JButton category[] = new JButton[4];
 	JButton recButton = new JButton("START");
 	
-	JLabel label_imag;
-	BufferedImage r;
+	JLabel label_imag = new JLabel(new ImageIcon("./Roulette.PNG"));
 	
 	/**
 	 * 입력값 검사
@@ -92,8 +93,13 @@ public class UserScreen extends JFrame{
 			p2.add(allergyOption[i]);
 		}
 		
+		label_imag.setBounds(0, 100, 500, 400);
+	    recButton.setBounds(380, 510, 80, 30);	//start
+		
 	    add(p1);
 	    add(p2);
+	    add(label_imag);
+	    add(recButton);
 	    pack();
 	    setSize(500, 600);
 	    
