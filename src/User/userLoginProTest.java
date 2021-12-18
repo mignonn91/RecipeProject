@@ -10,7 +10,7 @@ class userLoginProTest {
 	void testLoginCheck() {
 		
 		//테스트케이스를 이용하여 자동화
-		System.out.println("사용자 로그인 검사");
+		System.out.println("사용자 로그인");
 		String text1 = "Go";	//입력 데이터
 		String text2 = "1234";	//입력 데이터
 		int expResult = 0;		//테스트 오러클

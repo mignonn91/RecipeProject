@@ -26,7 +26,7 @@ public class adminLoginPro {
 	 * ID, PW 요청
 	 * @return ID, PW 요청 후 리턴 값
 	 */
-	ArrayList<ArrayList<String>> ADIDPWRequest() {
+	static ArrayList<ArrayList<String>> ADIDPWRequest() {
 		
 		ArrayList<ArrayList<String>> userDB = new ArrayList<ArrayList<String>>();
 		DBCConnection DBCon;
@@ -64,7 +64,7 @@ public class adminLoginPro {
 	 * @param text1	ID
 	 * @param text2	PW
 	 */
-	int ADloginCheck(String text1, String text2) {
+	static int ADloginCheck(String text1, String text2) {
 		
 		int check = 1;
 		
