@@ -123,6 +123,8 @@ public class UserScreen extends JFrame{
 						JOptionPane.showMessageDialog(null, "입력값을 확인하세요.","에러",JOptionPane.ERROR_MESSAGE);
 					}else {
 //						recipeView
+						dispose();
+						setVisible(list);
 					}
 				}
 			}
@@ -130,6 +132,18 @@ public class UserScreen extends JFrame{
 	    
 	}
 	
+	/**
+	 * 화면보이기(레시피화면)
+	 */
+	void setVisible(ArrayList<ArrayList<String>> list1) {
+		recipeView rView;
+		rView = new recipeView(list1);
+	}
+	
+	/**
+	 * 검색처리
+	 * @return 검색할 sql
+	 */
 	String scrchPro() {
 		
 		String s_str = "select * from recipeDB where name like '%" + recipename.getText() + "%'";

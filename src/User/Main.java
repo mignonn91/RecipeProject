@@ -3,6 +3,8 @@
  */
 package User;
 
+import java.util.ArrayList;
+
 /**
  * @author Soft43
  *
@@ -22,11 +24,8 @@ public class Main {
 	 */
 	private static void loginRequest() {
 		// TODO Auto-generated method stub
-//		userloginScreen userLS;
-//		userLS = new userloginScreen();
-		
-		UserScreen test;
-		test = new UserScreen();
+		userloginScreen userLS;
+		userLS = new userloginScreen();
 	}
 
 }
