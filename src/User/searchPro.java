@@ -17,7 +17,7 @@ public class searchPro {
 	 * 레시피명, 알러지 요청
 	 * @param text1	검색 SQL(레시피명, 알러지정보 포함)
 	 */
-	ArrayList<ArrayList<String>> recipeAllergyReq(String text1) {
+	static ArrayList<ArrayList<String>> recipeAllergyReq(String text1) {
 		
 		ArrayList<ArrayList<String>> recipeDB = new ArrayList<ArrayList<String>>();
 		DBCConnection DBCon;
@@ -56,7 +56,6 @@ public class searchPro {
 		} catch (Exception e) {
 			System.out.println(sql);
 		}
-		
 		return recipeDB;
 		
 	}

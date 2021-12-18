@@ -125,7 +125,6 @@ public class UserScreen extends JFrame{
 					if (list.size()==0) {
 						JOptionPane.showMessageDialog(null, "입력값을 확인하세요.","에러",JOptionPane.ERROR_MESSAGE);
 					}else {
-//						recipeView
 						dispose();
 						setVisible(list);
 					}
