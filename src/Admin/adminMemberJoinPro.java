@@ -22,7 +22,7 @@ public class adminMemberJoinPro {
 	 * 데이터요청
 	 * @return adminDB데이터
 	 */
-	ArrayList<ArrayList<String>> IDPWRequest() {
+	static ArrayList<ArrayList<String>> IDPWRequest() {
 		
 		ArrayList<ArrayList<String>> adminDB = new ArrayList<ArrayList<String>>();
 		DBCConnection DBCon;
@@ -59,7 +59,7 @@ public class adminMemberJoinPro {
 	 * ID 중복 검사
 	 * @param text1 ID
 	 */
-	int ADidDuplication(String text1) {
+	static int ADidDuplication(String text1) {
 		
 		int check = 0;
 		for (int i = 0; i < IDPWRequest().size(); i++) {
