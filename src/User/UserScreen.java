@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -102,6 +103,9 @@ public class UserScreen extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				
+				searchPro searchP;
+				searchP = new searchPro();
+				
 				int count = 0;	//체크 개수
 				String text2 = "";
 				for (int i = 0; i < allergyOption.length; i++) {
@@ -112,11 +116,47 @@ public class UserScreen extends JFrame{
 				
 				if(recipesearchcheck(recipename.getText(), text2)==0) {
 					
+					String str = scrchPro();
+					ArrayList<ArrayList<String>>list = searchP.recipeAllergyReq(str);
 					
-					
+					if (list.size()==0) {
+						JOptionPane.showMessageDialog(null, "입력값을 확인하세요.","에러",JOptionPane.ERROR_MESSAGE);
+					}else {
+//						recipeView
+					}
 				}
 			}
 		});
 	    
-	}	
+	}
+	
+	String scrchPro() {
+		
+		String s_str = "select * from recipeDB where name like '%" + recipename.getText() + "%'";
+		int count = 0;	//체크 개수
+		for (int i = 0; i < allergyOption.length; i++) {
+		    if (allergyOption[i].isSelected()==true) {
+		        count++;
+		    }
+		}
+
+		if (allergyOption[7].isSelected()==true) {
+		    s_str = s_str + ";";
+
+		}else{
+		    for (int i = 0; i < allergyOption.length; i++) {
+		        if (allergyOption[i].isSelected()==true) {
+		            if(i == count) {
+		                s_str = s_str + " and ingredient not like '%" + allergyOption[i].getText() + "%';";
+		            }else {
+		                s_str = s_str + " and ingredient not like '%" + allergyOption[i].getText() + "%'";
+		            }
+		        }
+		    }
+		}
+		
+		return s_str;
+		
+	}
+	
 }
