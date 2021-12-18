@@ -19,7 +19,7 @@ public class userMemberJoinPro {
 	 * 데이터요청
 	 * @return userDB 데이터
 	 */
-	ArrayList<ArrayList<String>> IDPWRequest() {
+	static ArrayList<ArrayList<String>> IDPWRequest() {
 		
 		ArrayList<ArrayList<String>> userDB = new ArrayList<ArrayList<String>>();
 		DBCConnection DBCon;
@@ -56,7 +56,7 @@ public class userMemberJoinPro {
 	 * ID 중복 검사
 	 * @param text1 ID
 	 */
-	int idDuplication(String text1) {
+	static int idDuplication(String text1) {
 		
 		int check = 0;
 		for (int i = 0; i < IDPWRequest().size(); i++) {
